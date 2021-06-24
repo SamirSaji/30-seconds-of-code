@@ -11,8 +11,8 @@ Creates an object from an array, using a function to map each value to a key.
 
 ```js
 const indexBy = (arr, fn) =>
-  arr.reduce((obj, v, i) => {
-    obj[fn(v, i, arr)] = v;
+  arr.reduce((obj, v) => {
+    obj[fn(v)] = v;
     return obj;
   }, {});
 ```
